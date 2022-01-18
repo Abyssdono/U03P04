@@ -24,7 +24,7 @@ public class U03EP01 {
  String[] meses ={"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"};
  Double[] precipitaciones;
 precipitaciones = new Double[12];
-while(i<meses.length){
+do{
     try {
          System.out.print(meses[i]+" : ");
         mm = sc.nextDouble();
@@ -37,7 +37,7 @@ while(i<meses.length){
         System.out.print("  Error:Debe de introducir un  valor double\n");
         sc.next();
 }
-}
+}while(i<meses.length)
 
 
 for(i=0;i<precipitaciones.length;i++){
@@ -67,10 +67,10 @@ Arrays.sort(precipitacionesMenorAMayor);
 mediana= (precipitacionesMenorAMayor[5] + precipitacionesMenorAMayor[6])/2;
 
 System.out.printf("El mes mas lluviosos  "+meses[mesMaximo]);
-System.out.printf(" con %5.3f mm",mmMaximo);
-System.out.printf("\nMedia: %5.3f mm",media);
-System.out.printf("\nMediana: %5.3f mm",mediana);
-System.out.printf("\nDesviacion :%5.3f mm",desviacion);
+System.out.printf(" con %6.3f mm",mmMaximo);
+System.out.printf("\nMedia: %6.3f mm",media);
+System.out.printf("\nMediana: %6.3f mm",mediana);
+System.out.printf("\nDesviacion :%6.3f mm",desviacion);
 sc.close();
 
 
